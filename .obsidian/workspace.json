@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "aws/cdk/Intro.md",
+                "file": "git/README.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "aws/cdk/Intro.md",
+                "file": "git/README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "aws/cdk/Intro.md",
+                "file": "git/README.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "aws/cdk/Intro.md"
+                "file": "git/README.md"
               }
             }
           }
@@ -148,8 +148,11 @@
   },
   "active": "9a3fd68bfaea22a0",
   "lastOpenFiles": [
-    "git/merge conflicts.md",
     "aws/cdk/Intro.md",
+    "git/README.md",
+    "git/media",
+    "git/media/gitops.png",
+    "git/merge conflicts.md",
     "github/github_actions/github-actions.pdf",
     "github/github_actions/github-actions.md",
     "github/github_actions/git-review.md",
@@ -172,7 +175,6 @@
     "vike/telefunc/remote-functions.md",
     "vike/brillout-react-stream/res.flush.md",
     "vike/telefunc",
-    "vike/brillout-react-stream",
     "golang/go.dev.md",
     "Welcome.md"
   ]
