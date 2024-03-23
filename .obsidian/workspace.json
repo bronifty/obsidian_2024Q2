@@ -148,6 +148,7 @@
   },
   "active": "9a3fd68bfaea22a0",
   "lastOpenFiles": [
+    "git/file01",
     "file01",
     "git/media/gitops.png",
     "git/README.md",
@@ -175,7 +176,6 @@
     "git",
     "vike/telefunc/remote-functions.md",
     "vike/brillout-react-stream/res.flush.md",
-    "vike/telefunc",
     "golang/go.dev.md",
     "Welcome.md"
   ]
