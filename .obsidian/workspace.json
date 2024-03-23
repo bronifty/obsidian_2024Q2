@@ -148,10 +148,10 @@
   },
   "active": "9a3fd68bfaea22a0",
   "lastOpenFiles": [
-    "aws/cdk/Intro.md",
-    "git/README.md",
-    "git/media",
     "git/media/gitops.png",
+    "git/README.md",
+    "aws/cdk/Intro.md",
+    "git/media",
     "git/merge conflicts.md",
     "github/github_actions/github-actions.pdf",
     "github/github_actions/github-actions.md",
