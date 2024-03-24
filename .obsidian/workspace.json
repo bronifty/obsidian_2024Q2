@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "git/README.md",
+                "file": "aws/cdk/Intro.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "git/README.md",
+                "file": "aws/cdk/Intro.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "git/README.md",
+                "file": "aws/cdk/Intro.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "git/README.md"
+                "file": "aws/cdk/Intro.md"
               }
             }
           }
@@ -146,15 +146,18 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "76286f079ab7585e",
+  "active": "e7c51876dab706a6",
   "lastOpenFiles": [
-    "git/media/gitops.png",
+    "aws/cdk/media/cdk1.png",
+    "aws/cdk/media",
+    "aws/cdk/CDK Day 2023.md",
+    "aws/cdk/Intro.md",
     "git/README.md",
+    "git/media/gitops.png",
     "git/media/gitops 1.png",
     "git/file02",
     "git/file01",
     "file01",
-    "aws/cdk/Intro.md",
     "git/media",
     "git/merge conflicts.md",
     "github/github_actions/github-actions.pdf",
@@ -173,7 +176,6 @@
     "ubuntu/settings.md",
     "ubuntu/dual boot.md",
     "packages-that-matter/README.md",
-    "packages-that-matter",
     "vike/telefunc/remote-functions.md",
     "vike/brillout-react-stream/res.flush.md",
     "golang/go.dev.md",
