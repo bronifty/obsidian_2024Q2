@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "aws/cdk/Intro.md",
+                "file": "aws/cdk/Docs.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "aws/cdk/Intro.md",
+                "file": "aws/cdk/Docs.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "aws/cdk/Intro.md",
+                "file": "aws/cdk/Docs.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "aws/cdk/Intro.md"
+                "file": "aws/cdk/Docs.md"
               }
             }
           }
@@ -146,12 +146,13 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "e7c51876dab706a6",
+  "active": "76286f079ab7585e",
   "lastOpenFiles": [
+    "aws/cdk/Architecture Concepts.md",
+    "aws/cdk/Docs.md",
     "aws/cdk/media/cdk1.png",
     "aws/cdk/media",
     "aws/cdk/CDK Day 2023.md",
-    "aws/cdk/Intro.md",
     "git/README.md",
     "git/media/gitops.png",
     "git/media/gitops 1.png",
