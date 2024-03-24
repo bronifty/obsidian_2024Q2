@@ -34,10 +34,10 @@ which tsserver
 # get account id
 aws sts get-caller-identity
 # get sso identity org region from local config
-cat ~/.aws/config
+aws configure get region
 ```
 
-> result of cat ~/.aws/config should look something like the following:
+> cat ~/.aws/config should look something like the following:
 ```shell
 [default]
 sso_session = wing
