@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "aws/cdk/Docs.md",
+                "file": "git/media/Commands.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "aws/cdk/Docs.md",
+                "file": "git/media/Commands.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "aws/cdk/Docs.md",
+                "file": "git/media/Commands.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "aws/cdk/Docs.md"
+                "file": "git/media/Commands.md"
               }
             }
           }
@@ -148,17 +148,19 @@
   },
   "active": "76286f079ab7585e",
   "lastOpenFiles": [
-    "aws/cdk/Architecture Concepts.md",
-    "aws/cdk/Docs.md",
     "aws/cdk/media/cdk1.png",
     "aws/cdk/media",
+    "aws/cdk/Docs.md",
     "aws/cdk/CDK Day 2023.md",
+    "aws/cdk/Architecture Concepts.md",
     "git/README.md",
+    "git/media/Commands.md",
     "git/media/gitops.png",
     "git/media/gitops 1.png",
     "git/file02",
     "git/file01",
     "file01",
+    "aws/cdk/Intro.md",
     "git/media",
     "git/merge conflicts.md",
     "github/github_actions/github-actions.pdf",
