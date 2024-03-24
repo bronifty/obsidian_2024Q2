@@ -8,6 +8,17 @@
 > Prerequisites: 
 > 1) aws cli
 > 2) aws cdk cli
+```shell
+npm install -g aws-cdk
+which cdk
+```
+> 4) typescript (tsc and tsserver)
+```shell
+npm i -g typescript
+which tsc
+which tsserver
+```
+
 
 ## Bootstrapping
 - needs to be done for every environment
