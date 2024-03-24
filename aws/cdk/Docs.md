@@ -58,3 +58,11 @@ sso_registration_scopes = sso:account:access
 cdk bootstrap aws://851725517932/us-east-1
 ```
 
+[ Delete bootstrap](https://chat.openai.com/c/38e3c864-248a-445a-867a-5c9497ebd54b)
+
+```shell
+# run this command in the root of the project with cdk.json
+cdk list # get name of cdk project
+cdk destroy --app <app_name> # name from prev cmd above
+```
+
