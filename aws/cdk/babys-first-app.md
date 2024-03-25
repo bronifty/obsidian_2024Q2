@@ -126,3 +126,61 @@ new Project01Stack(app, 'Project01Stack', {
 ```shell
 cdk ls
 ```
+
+### Add Construct
+
+```typescript
+new s3.Bucket(this, "MyFirstBucketOnUbuntuLaptop", {
+  versioned: true,
+});
+```
+
+### Build App
+
+```shell
+npm run build
+```
+
+### Synthesize CloudFormation Stack
+
+- output goes to cdk.out folder in root of project
+
+```shell
+cdk synth
+```
+
+### Deploy Stack
+
+```shell
+cdk deploy
+```
+
+### Update Stack
+
+```typescript
+new s3.Bucket(this, "MyFirstBucketOnUbuntuLaptop", {
+  versioned: true,
+  removalPolicy: cdk.RemovalPolicy.DESTROY,
+  autoDeleteObjects: true,
+});
+```
+
+### Build App
+
+```shell
+npm run build
+```
+
+### Synthesize CloudFormation Stack
+
+```shell
+cdk synth
+```
+
+### View Changeset (Diff)
+
+- cdk cli queries aws account for cloudformation stack and compares it to the synthesized stack
+
+```shell
+cdk diff
+```
