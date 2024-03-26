@@ -196,3 +196,17 @@ cdk deploy
 ```shell
 cdk destroy
 ```
+
+For additional resources, see the following:
+
+Try the CDK Workshop for a more in-depth tour involving a more complex project.
+
+Dive deeper into concepts like Environments, Assets, Permissions, Runtime context, Parameters, and Customizing constructs from the AWS Construct Library.
+
+See the API reference to begin exploring the CDK constructs available for your favorite AWS services.
+
+Visit Construct Hub to discover constructs created by AWS and others.
+
+Explore Examples of using the AWS CDK.
+
+The AWS CDK is an open-source project. To contribute, see to Contributing to the AWS Cloud Development Kit (AWS CDK).
