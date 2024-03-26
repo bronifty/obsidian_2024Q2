@@ -199,6 +199,8 @@ cdk destroy
 
 For additional resources, see the following:
 
+https://docs.aws.amazon.com/cdk/v2/guide/hello_world.html
+
 Try the CDK Workshop for a more in-depth tour involving a more complex project.
 
 Dive deeper into concepts like Environments, Assets, Permissions, Runtime context, Parameters, and Customizing constructs from the AWS Construct Library.
