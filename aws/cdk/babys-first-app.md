@@ -184,3 +184,15 @@ cdk synth
 ```shell
 cdk diff
 ```
+
+### Redeploy
+
+```shell
+cdk deploy
+```
+
+### Destroy
+
+```shell
+cdk destroy
+```
