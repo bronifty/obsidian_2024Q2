@@ -1,0 +1,45 @@
+# CDK Course
+
+[CDK Course](https://www.udemy.com/course/aws-typescript-cdk-serverless-react/learn/lecture/37731358#overview)
+
+### Referring to Variables Across Stacks
+
+```typescript
+// App
+const app = new cdk.App();
+const photoStack = new PhotoStack(app, "PhotoStack", {});
+new PhotoStackHandler(app, "PhotoStackHandler", {
+  targetBucketArn: photoStack.photoBucketArn,
+});
+
+// PhotoStackHandler
+interface PhotoStackHandlerProps extends cdk.StackProps {
+  targetBucketArn: string;
+}
+export class PhotoStackHandler extends cdk.Stack {
+  constructor(scope: Construct, id: string, props: PhotoStackHandlerProps) {
+    super(scope, id, props);
+
+    // const targetBucket: string = cdk.Fn.importValue("photoBucket");
+
+    new cdk.aws_lambda.Function(this, "PhotoHandler", {
+      runtime: cdk.aws_lambda.Runtime.NODEJS_18_X,
+      handler: "index.handler",
+      code: cdk.aws_lambda.Code.fromAsset(
+        path.join(__dirname, "lambda-handler")
+      ),
+      environment: {
+        TARGET_BUCKET: props.targetBucketArn,
+      },
+    });
+  }
+}
+
+// PhotoStack
+const photoBucket = new cdk.aws_s3.Bucket(this, "photoBucket", {
+  bucketName: `photo-bucket-${this.stackSuffix}`,
+  removalPolicy: cdk.RemovalPolicy.DESTROY,
+  autoDeleteObjects: true,
+});
+this.photoBucketArn = photoBucket.bucketArn;
+```
