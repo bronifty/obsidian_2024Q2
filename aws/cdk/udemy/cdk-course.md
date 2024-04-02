@@ -46,6 +46,8 @@ this.photoBucketArn = photoBucket.bucketArn;
 
 ### Using Aspects Visitor Pattern to add Tags
 
+- another use case: cdk-nag to enforce best practices (like a linter)
+
 ```typescript
 // /bin/BucketTagger.ts
 import * as cdk from "aws-cdk-lib";
