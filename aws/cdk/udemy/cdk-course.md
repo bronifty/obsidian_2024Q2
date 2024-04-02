@@ -43,3 +43,34 @@ const photoBucket = new cdk.aws_s3.Bucket(this, "photoBucket", {
 });
 this.photoBucketArn = photoBucket.bucketArn;
 ```
+
+### Using Aspects Visitor Pattern to add Tags
+
+```typescript
+// /bin/BucketTagger.ts
+import * as cdk from "aws-cdk-lib";
+import { IAspect } from "aws-cdk-lib";
+import { IConstruct } from "constructs";
+
+export class BucketTagger implements IAspect {
+  private key: string;
+  private value: string;
+
+  constructor(key: string, value: string) {
+    this.key = key;
+    this.value = value;
+  }
+
+  visit(node: IConstruct): void {
+    console.log("Visiting " + node.node.id);
+
+    if (node instanceof cdk.aws_s3.CfnBucket) {
+      node.tags.setTag(this.key, this.value);
+    }
+  }
+}
+
+// /bin/app.ts
+const tagger = new BucketTagger("label", "PhotoStackBucket");
+cdk.Aspects.of(app).add(tagger);
+```
