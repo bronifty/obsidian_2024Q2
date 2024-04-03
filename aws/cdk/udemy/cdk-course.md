@@ -134,3 +134,26 @@ GET https://wlo3l9xax0.execute-api.us-east-1.amazonaws.com/prod/spaces
 ###
 
 ```
+
+### ts-node Debugger config
+```json
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Debug local file",
+      "runtimeArgs": ["-r", "ts-node/register"],
+      "args": ["${relativeFile}"],
+      "env": {
+        "AWS_REGION": "us-east-1"
+      }
+    }
+  ]
+}
+
+```
