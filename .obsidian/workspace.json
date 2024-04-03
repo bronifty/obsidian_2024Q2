@@ -69,7 +69,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "cb2bdf76ebe22dcc",
@@ -146,7 +147,7 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "76286f079ab7585e",
+  "active": "e7c51876dab706a6",
   "lastOpenFiles": [
     "aws/cdk/Architecture Concepts.md",
     "aws/cdk/Docs.md",
