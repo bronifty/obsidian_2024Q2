@@ -123,3 +123,14 @@ export class LambdaStack extends cdk.Stack {
   }
 }
 ```
+
+### REST Client (Huachao Mao) for VSCode
+
+- name of file ends in dot http (e.g. test.http)
+
+```http
+
+GET https://wlo3l9xax0.execute-api.us-east-1.amazonaws.com/prod/spaces
+###
+
+```
