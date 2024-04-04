@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "aws/cdk/udemy/cdk-course.md",
+                "file": "aws/cdk/cicd.md",
                 "mode": "source",
                 "source": false
               }
@@ -69,8 +69,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "cb2bdf76ebe22dcc",
@@ -86,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "aws/cdk/udemy/cdk-course.md",
+                "file": "aws/cdk/cicd.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "aws/cdk/udemy/cdk-course.md",
+                "file": "aws/cdk/cicd.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "aws/cdk/udemy/cdk-course.md"
+                "file": "aws/cdk/cicd.md"
               }
             }
           }
@@ -147,16 +146,19 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "e7c51876dab706a6",
+  "active": "76286f079ab7585e",
   "lastOpenFiles": [
+    "aws/cdk/media/aws-cdk-security.png",
+    "aws/cdk/cicd.md",
+    "git/media/Commands.md",
+    "git/media/gitops.png",
+    "aws/cdk/udemy/cdk-course.md",
     "aws/cdk/Architecture Concepts.md",
     "aws/cdk/Docs.md",
-    "git/media/Commands.md",
     "aws/cdk/media/cdk1.png",
     "aws/cdk/media",
     "aws/cdk/CDK Day 2023.md",
     "git/README.md",
-    "git/media/gitops.png",
     "git/media/gitops 1.png",
     "git/file02",
     "git/file01",
