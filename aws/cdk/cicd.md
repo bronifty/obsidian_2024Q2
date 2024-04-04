@@ -48,13 +48,9 @@ jobs:
 
 ```
 
-in the github to aws via federated oidc can you explain the workflow? what is federated oidc and what is the alternative?
 
-ChatGPT
+federated OIDC in aws to github is delegating authentication (identity) to an external provider with a trust relationship via the role and that it is through the role that authorization is managed for the identity
 
-ChatGPT
-
-The GitHub to AWS via Federated OIDC (OpenID Connect) workflow establishes a trust relationship between GitHub Actions and AWS, enabling GitHub Actions workflows to securely assume AWS IAM Roles. This setup allows for secure and efficient management of AWS resources directly from GitHub workflows, leveraging temporary credentials without the need to hardcode or manage long-term AWS access keys in GitHub Secrets.
 
 ### Federated OIDC Explained
 
