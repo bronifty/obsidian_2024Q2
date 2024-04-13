@@ -141,41 +141,57 @@ import { handler } from "../src/services/spaces";
 ### 3. env vars declared in the file
 - add the env vars to the file and execute it with ts-node specifying the correct flags
 ```ts
-// test/launcher.ts
-import { handler } from "../src/services/spaces/handler";
-
+// test/harness.ts
+import { handler } from "../src/services/spaces";
 process.env.AWS_REGION = "us-east-1";
 process.env.TABLE_NAME = "spaces-table-0e64312a57df";
+// handler(
+//   {
+//     httpMethod: "POST",
+//     body: JSON.stringify({
+//       location: "xyz",
+//     }),
+//   } as any,
+//   {} as any
+// );
 
-handler(
-  {
-    httpMethod: "GET",
-    queryStringParameters: {
-      id: "fbe76aea-5aff-434e-85f6-e8f5fc1647ec",
-    },
-    body: JSON.stringify({
-      location: "Best location 2",
-    }),
-  } as any,
-  {} as any
-).then((result) => {
-  console.log(result);
-});
+async function execScan(): Promise<any> {
+  try {
+    const scanResult = await handler(
+      {
+        httpMethod: "GET",
+      } as any,
+      {} as any
+    );
+    console.log(scanResult);
+  } catch (error) {
+    console.error(error);
+  }
+}
+execScan();
+
 
 ```
 
 ```ts
-// src/services/spaces/handler.ts
-import { DynamoDBClient } from "@aws-sdk/client-dynamodb";
+// src/services/spaces/index.ts
 import {
   APIGatewayProxyEvent,
   APIGatewayProxyResult,
   Context,
 } from "aws-lambda";
+import DynamoDBService from "../shared/db";
+import { postHandler } from "./postHandler";
+import { scanHandler } from "./scanHandler";
+// const ddb = DynamoDBService.getInstance({
+//   region: process.env.AWS_REGION || "",
+//   tableName: process.env.TABLE_NAME || "",
+// });
 
-import { getSpaces } from "./GetSpaces";
-
-const ddbClient = new DynamoDBClient({});
+// for testing
+import { DynamoDBClient } from "@aws-sdk/client-dynamodb";
+const ddb = new DynamoDBClient({});
+// end of testing
 
 async function handler(
   event: APIGatewayProxyEvent,
@@ -189,13 +205,13 @@ async function handler(
   try {
     switch (event.httpMethod) {
       case "GET":
-        response = await getSpaces(event, ddbClient);
-
-        break;
+        response = await scanHandler(event, ddb);
+      // case "POST":
+      //   return await postHandler(event, ddb);
       default:
         break;
     }
-  } catch (error) {
+  } catch (error: Error | any) {
     response = {
       statusCode: 500,
       body: "error",
@@ -205,23 +221,24 @@ async function handler(
 }
 
 export { handler };
+
 ```
 
 ```ts
-// src/services/spaces/GetSpaces.ts
+// src/services/spaces/scanHandler.ts
 import {
   DynamoDBClient,
   GetItemCommand,
   ScanCommand,
 } from "@aws-sdk/client-dynamodb";
 import { unmarshall } from "@aws-sdk/util-dynamodb";
-import { APIGatewayProxyEvent, APIGatewayProxyResult } from "aws-lambda";
+import type { APIGatewayProxyEvent, APIGatewayProxyResult } from "aws-lambda";
+import DynamoDBService from "../shared/db";
 
-export async function getSpaces(
+export async function scanHandler(
   event: APIGatewayProxyEvent,
   ddbClient: DynamoDBClient
 ): Promise<APIGatewayProxyResult> {
-
   const result = await ddbClient.send(
     new ScanCommand({
       TableName: process.env.TABLE_NAME,
@@ -236,9 +253,94 @@ export async function getSpaces(
   };
 }
 
+
+```
+
+```ts
+// src/services/shared/db.ts
+process.env.AWS_REGION = "us-east-1";
+process.env.TABLE_NAME = "spaces-table-0e64312a57df";
+
+import {
+  DynamoDBClient,
+  PutItemCommand,
+  ScanCommand,
+} from "@aws-sdk/client-dynamodb";
+
+// needs TABLE_NAME
+interface DynamoDBServiceProps {
+  tableName?: string;
+  id?: string;
+  location?: string;
+}
+
+interface IDynamoDBService {
+  putItem(props: DynamoDBServiceProps): Promise<void>;
+  // Uncomment and implement when needed
+  // getItem(tableName: string, key: any): Promise<any>;
+}
+
+class DynamoDBService {
+  private static instance: DynamoDBService;
+  private client: DynamoDBClient;
+  private tableName: string;
+
+  private constructor() {
+    this.client = new DynamoDBClient({});
+    this.tableName = process.env.TABLE_NAME || "";
+  }
+
+  public static getInstance(): DynamoDBService {
+    if (!DynamoDBService.instance) {
+      DynamoDBService.instance = new DynamoDBService();
+    }
+    return DynamoDBService.instance;
+  }
+
+  public async scanTable(): Promise<any[]> {
+    try {
+      const result = await this.client.send(
+        new ScanCommand({
+          TableName: this.tableName,
+        })
+      );
+      return result.Items || [];
+    } catch (error) {
+      console.error("Error scanning DynamoDB table:", error);
+      throw error;
+    }
+  }
+
+  public async putItem(props: DynamoDBServiceProps): Promise<void> {
+    try {
+      const item: { [key: string]: { S: string } } = {};
+      if (props.id) {
+        item.id = { S: props.id };
+      }
+      if (props.location) {
+        item.location = { S: props.location };
+      }
+
+      const result = await this.client.send(
+        new PutItemCommand({
+          TableName: this.tableName,
+          Item: item,
+        })
+      );
+      console.log(result);
+    } catch (error) {
+      console.error("Error putting item into DynamoDB:", error);
+      throw error;
+    }
+  }
+
+  // Add more methods as needed...
+}
+
+export default DynamoDBService;
 ```
 
 ```shell
-ts-node test/launcher.ts
+ts-node test/harness.ts
 ```
 
