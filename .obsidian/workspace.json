@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "aws/cdk/cicd.md",
+                "file": "aws/cdk/udemy/debugging and environment.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "aws/cdk/cicd.md",
+                "file": "aws/cdk/udemy/debugging and environment.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "aws/cdk/cicd.md",
+                "file": "aws/cdk/udemy/debugging and environment.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "aws/cdk/cicd.md"
+                "file": "aws/cdk/udemy/debugging and environment.md"
               }
             }
           }
@@ -148,11 +148,12 @@
   },
   "active": "d80035f8d664a489",
   "lastOpenFiles": [
+    "aws/cdk/udemy/cdk-course.md",
+    "aws/cdk/udemy/debugging and environment.md",
     "aws/cdk/cicd.md",
     "aws/cdk/media/aws-cdk-security.png",
     "git/media/Commands.md",
     "git/media/gitops.png",
-    "aws/cdk/udemy/cdk-course.md",
     "aws/cdk/Architecture Concepts.md",
     "aws/cdk/Docs.md",
     "aws/cdk/media/cdk1.png",
