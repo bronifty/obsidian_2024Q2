@@ -1,5 +1,10 @@
 
-### REST API Requests
+# 3 Methods to Debug
+1. env vars in PROD (dynamically injected by CDK)
+2. env vars in vs code debugger launch.json
+3. env vars declared in the file
+
+### 1. env vars in prod injected by cdk
 
 ```http
 @url = https://wlo3l9xax0.execute-api.us-east-1.amazonaws.com/prod/
@@ -92,7 +97,7 @@ export class LambdaStack extends cdk.Stack {
 }
 ```
 
-### Debugger
+### 2. env vars in launch.json config of vs code debugger
 - uses launch.json config with env vars
 ```json
 {
@@ -119,19 +124,6 @@ export class LambdaStack extends cdk.Stack {
 ```typescript
 import { handler } from "../src/services/spaces";
 
-process.env.AWS_REGION = "us-east-1";
-process.env.TABLE_NAME = "spaces-table-0e64312a57df";
-
-// handler(
-//   {
-//     httpMethod: "POST",
-//     body: JSON.stringify({
-//       location: "xyz",
-//     }),
-//   } as any,
-//   {} as any
-// );
-
 (async () => {
   try {
     const scanResult = await handler(
@@ -146,4 +138,107 @@ process.env.TABLE_NAME = "spaces-table-0e64312a57df";
   }
 })();
 ```
-### ts-node
+### 3. env vars declared in the file
+- add the env vars to the file and execute it with ts-node specifying the correct flags
+```ts
+// test/launcher.ts
+import { handler } from "../src/services/spaces/handler";
+
+process.env.AWS_REGION = "us-east-1";
+process.env.TABLE_NAME = "spaces-table-0e64312a57df";
+
+handler(
+  {
+    httpMethod: "GET",
+    queryStringParameters: {
+      id: "fbe76aea-5aff-434e-85f6-e8f5fc1647ec",
+    },
+    body: JSON.stringify({
+      location: "Best location 2",
+    }),
+  } as any,
+  {} as any
+).then((result) => {
+  console.log(result);
+});
+
+```
+
+```ts
+// src/services/spaces/handler.ts
+import { DynamoDBClient } from "@aws-sdk/client-dynamodb";
+import {
+  APIGatewayProxyEvent,
+  APIGatewayProxyResult,
+  Context,
+} from "aws-lambda";
+
+import { getSpaces } from "./GetSpaces";
+
+const ddbClient = new DynamoDBClient({});
+
+async function handler(
+  event: APIGatewayProxyEvent,
+  context: Context
+): Promise<APIGatewayProxyResult> {
+  let response: APIGatewayProxyResult = {
+    statusCode: 400,
+    body: "Unsupported method",
+  };
+
+  try {
+    switch (event.httpMethod) {
+      case "GET":
+        response = await getSpaces(event, ddbClient);
+
+        break;
+      default:
+        break;
+    }
+  } catch (error) {
+    response = {
+      statusCode: 500,
+      body: "error",
+    };
+  }
+  return response;
+}
+
+export { handler };
+```
+
+```ts
+// src/services/spaces/GetSpaces.ts
+import {
+  DynamoDBClient,
+  GetItemCommand,
+  ScanCommand,
+} from "@aws-sdk/client-dynamodb";
+import { unmarshall } from "@aws-sdk/util-dynamodb";
+import { APIGatewayProxyEvent, APIGatewayProxyResult } from "aws-lambda";
+
+export async function getSpaces(
+  event: APIGatewayProxyEvent,
+  ddbClient: DynamoDBClient
+): Promise<APIGatewayProxyResult> {
+
+  const result = await ddbClient.send(
+    new ScanCommand({
+      TableName: process.env.TABLE_NAME,
+    })
+  );
+  const unmashalledItems = result.Items?.map((item) => unmarshall(item));
+  console.log(unmashalledItems);
+
+  return {
+    statusCode: 201,
+    body: JSON.stringify(unmashalledItems),
+  };
+}
+
+```
+
+```shell
+ts-node test/launcher.ts
+```
+
