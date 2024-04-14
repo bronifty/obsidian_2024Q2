@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "112c3d3562427f58",
+        "id": "48f9075fce58e587",
         "type": "tabs",
         "children": [
           {
-            "id": "d80035f8d664a489",
+            "id": "33f05283957a7fd7",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "aws/cdk/udemy/debugging and environment.md",
+                "file": "vike/vite-ssr/README.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "aws/cdk/udemy/debugging and environment.md",
+                "file": "vike/vite-ssr/README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "aws/cdk/udemy/debugging and environment.md",
+                "file": "vike/vite-ssr/README.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "aws/cdk/udemy/debugging and environment.md"
+                "file": "vike/vite-ssr/README.md"
               }
             }
           }
@@ -146,10 +146,14 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "d80035f8d664a489",
+  "active": "33f05283957a7fd7",
   "lastOpenFiles": [
-    "aws/cdk/udemy/cdk-course.md",
+    "vike/telefunc/remote-functions.md",
+    "vike/vite-ssr/README.md",
+    "vike/vite-ssr",
+    "vike/brillout-react-stream/res.flush.md",
     "aws/cdk/udemy/debugging and environment.md",
+    "aws/cdk/udemy/cdk-course.md",
     "aws/cdk/cicd.md",
     "aws/cdk/media/aws-cdk-security.png",
     "git/media/Commands.md",
@@ -177,14 +181,11 @@
     "github",
     "epic-react/faqs.md",
     "patterns-that-matter/Fundamentals of Software Architecture Chapter 4  - Architecture Characteristics.md",
-    "epic-react",
     "patterns-that-matter/README.md",
     "patterns-that-matter/Fundamentals of Software Architecture Chapter 3 - Modularity.md",
     "ubuntu/settings.md",
     "ubuntu/dual boot.md",
     "packages-that-matter/README.md",
-    "vike/telefunc/remote-functions.md",
-    "vike/brillout-react-stream/res.flush.md",
     "golang/go.dev.md",
     "Welcome.md"
   ]
