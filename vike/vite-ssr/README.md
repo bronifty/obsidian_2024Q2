@@ -61,9 +61,12 @@ pnpm link --global vite # link the app project to your global vite
 
 ```
 
-
+- https://deploy-preview-16089--vite-docs-main.netlify.app/guide/assets.html
 ```ts
 import imgUrl from './img.png'
 document.getElementById('hero-img').src = imgUrl
+
+import imgUrl from './img.svg'
+document.getElementById('hero-img').style.background = `url("${imgUrl}")`
 ```
 
