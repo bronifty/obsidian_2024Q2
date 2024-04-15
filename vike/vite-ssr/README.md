@@ -68,5 +68,11 @@ document.getElementById('hero-img').src = imgUrl
 
 import imgUrl from './img.svg'
 document.getElementById('hero-img').style.background = `url("${imgUrl}")`
+
+// does not work with SSR apparently because import.meta.url is not available in node??
+const imgUrl = new URL('./img.png', import.meta.url).href
+document.getElementById('hero-img').src = imgUrl
 ```
+
+https://github.com/Menci/vite-plugin-wasm
 
