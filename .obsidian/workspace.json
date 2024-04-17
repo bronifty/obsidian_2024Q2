@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "vike/vite-ssr/README.md",
+                "file": "deploy-vite-ssr/cdk.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "vike/vite-ssr/README.md",
+                "file": "deploy-vite-ssr/cdk.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "vike/vite-ssr/README.md",
+                "file": "deploy-vite-ssr/cdk.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "vike/vite-ssr/README.md"
+                "file": "deploy-vite-ssr/cdk.md"
               }
             }
           }
@@ -148,12 +148,16 @@
   },
   "active": "33f05283957a7fd7",
   "lastOpenFiles": [
-    "vike/telefunc/remote-functions.md",
+    "aws/cdk/1-babys-first-app.md",
+    "deploy-vite-ssr/cdk.md",
+    "aws/cdk/udemy/cdk-course.md",
+    "deploy-vite-ssr",
+    "aws/cdk/udemy/debugging and environment.md",
     "vike/vite-ssr/README.md",
+    "vike/vite-ssr/comparison of vite-ssr with remix.md",
+    "vike/telefunc/remote-functions.md",
     "vike/vite-ssr",
     "vike/brillout-react-stream/res.flush.md",
-    "aws/cdk/udemy/debugging and environment.md",
-    "aws/cdk/udemy/cdk-course.md",
     "aws/cdk/cicd.md",
     "aws/cdk/media/aws-cdk-security.png",
     "git/media/Commands.md",
@@ -178,15 +182,11 @@
     "github/github_actions",
     "github/Untitled.md",
     "github/Github.md",
-    "github",
     "epic-react/faqs.md",
     "patterns-that-matter/Fundamentals of Software Architecture Chapter 4  - Architecture Characteristics.md",
     "patterns-that-matter/README.md",
     "patterns-that-matter/Fundamentals of Software Architecture Chapter 3 - Modularity.md",
     "ubuntu/settings.md",
-    "ubuntu/dual boot.md",
-    "packages-that-matter/README.md",
-    "golang/go.dev.md",
-    "Welcome.md"
+    "ubuntu/dual boot.md"
   ]
 }
