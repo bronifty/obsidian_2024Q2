@@ -55,8 +55,7 @@ pnpm link --global vite # link the app project to your global vite
 
 "devDependencies": {
 
-"vite": "file:/Users/bronifty/codes/oss/vite"
-
+"vite": "file:/Users/bronifty/codes/oss/vite/packages/vite"
 }
 
 ```
