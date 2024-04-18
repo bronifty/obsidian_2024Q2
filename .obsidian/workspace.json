@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "aws/AWS Cloudfront.md",
+                "file": "aws/cdk/serverless-express.md",
                 "mode": "source",
                 "source": false
               }
@@ -98,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "aws/AWS Cloudfront.md",
+                "file": "aws/cdk/serverless-express.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "aws/AWS Cloudfront.md",
+                "file": "aws/cdk/serverless-express.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "aws/AWS Cloudfront.md"
+                "file": "aws/cdk/serverless-express.md"
               }
             }
           }
@@ -161,8 +161,9 @@
   },
   "active": "33f05283957a7fd7",
   "lastOpenFiles": [
-    "aws/cdk/udemy/debugging and environment.md",
     "aws/AWS Cloudfront.md",
+    "aws/cdk/serverless-express.md",
+    "aws/cdk/udemy/debugging and environment.md",
     "vike/vite-ssr/README.md",
     "aws/cdk/udemy/cdk-course.md",
     "aws/cdk/1-babys-first-app.md",
@@ -199,7 +200,6 @@
     "epic-react/faqs.md",
     "patterns-that-matter/Fundamentals of Software Architecture Chapter 4  - Architecture Characteristics.md",
     "patterns-that-matter/README.md",
-    "patterns-that-matter/Fundamentals of Software Architecture Chapter 3 - Modularity.md",
-    "ubuntu/settings.md"
+    "patterns-that-matter/Fundamentals of Software Architecture Chapter 3 - Modularity.md"
   ]
 }
