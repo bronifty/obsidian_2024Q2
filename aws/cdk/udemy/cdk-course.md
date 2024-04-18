@@ -80,7 +80,7 @@ cdk.Aspects.of(app).add(tagger);
 ### Create CDK Project From Scratch Without CLI
 
 - create folder
-- npm init -y
+- pnpm init
 - pnpm add -D @types/node typescript ts-node aws-cdk aws-cdk-lib constructs
 - create Launcher.ts file
 - create empty stack
