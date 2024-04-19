@@ -4,35 +4,22 @@
     "type": "split",
     "children": [
       {
-        "id": "48f9075fce58e587",
+        "id": "566d4b46fc2156d6",
         "type": "tabs",
         "children": [
           {
-            "id": "3ab2ef338e98eb1f",
+            "id": "0f72ed250beacda7",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "aws/cdk/1-babys-first-app.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "33f05283957a7fd7",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "aws/cdk/serverless-express.md",
+                "file": "aws/AWS ECR.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -98,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "aws/cdk/serverless-express.md",
+                "file": "aws/AWS ECR.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "aws/cdk/serverless-express.md",
+                "file": "aws/AWS ECR.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "aws/cdk/serverless-express.md"
+                "file": "aws/AWS ECR.md"
               }
             }
           }
@@ -159,14 +146,15 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "33f05283957a7fd7",
+  "active": "0f72ed250beacda7",
   "lastOpenFiles": [
-    "aws/AWS Cloudfront.md",
-    "aws/cdk/serverless-express.md",
-    "aws/cdk/udemy/debugging and environment.md",
-    "vike/vite-ssr/README.md",
-    "aws/cdk/udemy/cdk-course.md",
     "aws/cdk/1-babys-first-app.md",
+    "aws/AWS ECR.md",
+    "aws/cdk/udemy/cdk-course.md",
+    "aws/cdk/udemy/debugging and environment.md",
+    "aws/cdk/serverless-express.md",
+    "aws/AWS Cloudfront.md",
+    "vike/vite-ssr/README.md",
     "deploy-vite-ssr/cdk.md",
     "deploy-vite-ssr",
     "vike/vite-ssr/comparison of vite-ssr with remix.md",
@@ -199,7 +187,6 @@
     "github/Github.md",
     "epic-react/faqs.md",
     "patterns-that-matter/Fundamentals of Software Architecture Chapter 4  - Architecture Characteristics.md",
-    "patterns-that-matter/README.md",
-    "patterns-that-matter/Fundamentals of Software Architecture Chapter 3 - Modularity.md"
+    "patterns-that-matter/README.md"
   ]
 }
