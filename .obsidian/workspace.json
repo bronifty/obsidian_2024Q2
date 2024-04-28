@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "aws/AWS Cloudfront.md",
+                "file": "git/README.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "aws/AWS Cloudfront.md",
+                "file": "git/README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "aws/AWS Cloudfront.md",
+                "file": "git/README.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "aws/AWS Cloudfront.md"
+                "file": "git/README.md"
               }
             }
           }
@@ -148,6 +148,7 @@
   },
   "active": "0f72ed250beacda7",
   "lastOpenFiles": [
+    "aws/AWS Cloudfront.md",
     "git/README.md",
     "aws/AWS.md",
     "git/merge conflicts.md",
@@ -157,7 +158,6 @@
     "aws/cdk/udemy/cdk-course.md",
     "aws/cdk/udemy/debugging and environment.md",
     "aws/cdk/serverless-express.md",
-    "aws/AWS Cloudfront.md",
     "vike/vite-ssr/README.md",
     "deploy-vite-ssr/cdk.md",
     "deploy-vite-ssr",
