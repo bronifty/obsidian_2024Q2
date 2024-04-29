@@ -28,6 +28,6 @@ const url = queue.queueUrl; // => A string representing a deploy-time value
 - means to materialize a cloudformation template (or terraform json) out of the programming code
 
 [elad 2019 cdk intro](https://www.youtube.com/watch?v=ZWCvNFUN-sU)
-![](./media/cdk1.png)
+![](cdk1.png)
 
-![](./media/aws-cdk-security.png)
+![](aws-cdk-security.png)
