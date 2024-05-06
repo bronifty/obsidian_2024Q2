@@ -26,3 +26,6 @@ Replace local-branch-name with a name you want to give to your local�
    git checkout local-branch-name
 
 This will allow you to test and modify the changes proposed in the pull request locally.
+
+
+https://github.com/unjs/nitro/pull/2412
