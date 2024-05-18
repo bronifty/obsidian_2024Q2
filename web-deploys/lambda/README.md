@@ -41,7 +41,7 @@ yes hello this is dog
 ```
 
 - and all this will be in **a subdirectory of** the lib folder of the cdk. here goes the Stack
-	- cdk.aws_lambda_nodejs.NodeJsFunction does not work because it uses esbuild which takes a single file as the code and it's not called code it's called 'entry'
+	- cdk.aws_lambda_nodejs.NodeJsFunction does not work because it uses esbuild which takes a single file as the code and the options object key for the code is not "code" but "entry"
 	- the cdk.aws_lambda.Function takes a directory which it will zip, which is what we want
 
 ```ts
