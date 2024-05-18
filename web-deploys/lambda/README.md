@@ -1,7 +1,7 @@
 
 ```shell
 pnpx cdk bootstrap aws://851725517932/us-east-1
-cdk init app --language=typescript
+pnpx cdk init app --language=typescript
 ```
 
 
