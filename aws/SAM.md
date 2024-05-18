@@ -1,0 +1,3 @@
+
+wrangling apps and infra outside of a course (whose chapter may break anyhow) using examples and other resources requires a common abstraction. currently aws' preferred methodology is SAM, a template which gives a visual drag drop canvas...
+
