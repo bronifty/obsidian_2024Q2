@@ -20,8 +20,10 @@ pnpm create vite <app-name> --template vanilla-ts
   echo "#Typescript utility library" > README.md
 ```
 
+- get path resolution and automatic typescript types from the build
 ```sh
-pnpm add -D @types/node
+pnpm add -D @types/node 
+pnpm add -D vite-plugin-dts
 ```
 
 ```sh
@@ -31,12 +33,27 @@ touch vite.config.ts
 ```ts
 import { defineConfig } from 'vite'
 import { resolve } from 'path'
+import dts from 'vite-plugin-dts'
 
 // https://vitejs.dev/config/
 export default defineConfig({
   build: { lib: { entry: resolve(__dirname, 'src/main.ts'), formats: ['es'] } },
   resolve: { alias: { src: resolve('src/') } },
+  plugins: [dts()],
 })
+```
+- update the library's package.json to add the entry file and types
+	- the "main" file in dist will be automatically created by the build and based on the package name
+```json
+// package.json
+{
+"name": "marcs-observable",
+"main": "./dist/marcs-observable.js",
+"types": "./dist/main.d.ts",
+}
+```
+
+
 ```
 - update main.ts (your ts library file)
 ```ts
