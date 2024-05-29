@@ -1,3 +1,4 @@
+https://www.serverless.com/blog/publish-aws-lambda-layers-serverless-framework/
 https://github.com/mthenw/awesome-layers?tab=readme-ov-file
 https://docs.aws.amazon.com/lambda/latest/dg/runtimes-custom.html
    nodejs/
