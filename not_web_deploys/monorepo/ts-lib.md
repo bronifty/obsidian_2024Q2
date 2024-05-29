@@ -4,6 +4,8 @@ https://dev.to/vinomanick/create-a-typescript-utility-library-using-vite-916
 
 
 ```sh
+fnm install 22
+fnm default 22
 corepack enable
 corepack prepare pnpm@latest --activate
 ```
