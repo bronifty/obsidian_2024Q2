@@ -55,8 +55,6 @@ export default defineConfig({
 }
 ```
 
-
-```
 - update main.ts (your ts library file)
 ```ts
 
