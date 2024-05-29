@@ -7,12 +7,13 @@
 ```sh
 mkdir -p layer/nodejs/node_modules
 cd layer/nodejs
-npm install package1 package2
+pnpm init
+pnpm add install fastify fastify-aws-lambda
 cd ..
-zip -r my-layer.zip nodejs
+zip -r fastify-layer.zip nodejs
 ```
 
 ```sh
-aws lambda publish-layer-version --layer-name my-custom-layer --zip-file fileb://my-layer.zip --compatible-runtimes nodejs14.x nodejs16.x
+aws lambda publish-layer-version --layer-name fastify-layer --zip-file fileb://fastify-layer.zip --compatible-runtimes nodejs20.x nodejs18.x nodejs16.x nodejs14.x
 ```
 
